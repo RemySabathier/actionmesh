@@ -8,6 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ActionMesh: Animated 3D Mesh Generation with Temporal 3D Diffusion</title>
 
+  <!-- Favicon using 🎬 emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+
   <!-- Preconnect to external resources for faster loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -452,6 +455,7 @@
       height: 100%;
       object-fit: contain;
       border-radius: 9px;
+      border: none;
       background: transparent;
     }
 
@@ -776,7 +780,7 @@
               <span class="author-block">
                 <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/">Niloy J. Mitra</a><sup>3</sup>,</span>
               <span class="author-block">
-                <a href="https://tmonnier.com/">Tom Monnier</a><sup>1</sup>,</span>
+                <a href="https://tmonnier.com/">Tom Monnier</a><sup>1</sup></span>
             </div>
             <div class="is-size-5 publication-authors">
               <span class="author-block"><sup>1</sup>Meta Reality Labs,</span>
@@ -836,7 +840,7 @@
     <div class="container is-max-desktop">
       <p class="platforms-summary"
         style="font-size: 1.4rem; color: #444; margin-bottom: 1rem; font-family: 'Google Sans', sans-serif; text-align: center;">
-        <strong style="color: #4a90e2;">🎬 ActionMesh</strong> is a feed-forward <strong>video-to-4D model</strong> which generates <strong>high quality animated meshes</strong>.
+        <strong style="color: #4a90e2;">🎬 ActionMesh</strong> is a feed-forward <strong>video-to-4D model</strong> which generates <strong>high-quality animated meshes</strong>.
       </p>
       <div class="video-carousel-container">
         <div class="video-carousel">
@@ -879,18 +883,18 @@
                 Generating animated 3D objects is at the heart of many applications, yet most advanced works are
                 typically difficult to apply in practice because of their limited setup, their long runtime, or their
                 limited quality.
-                We introduce ActionMesh, a generative model that predicts production-ready 3D meshes "in action" in a
-                feed-forward manner.
+                We introduce <strong>ActionMesh</strong>, a generative model that predicts production-ready <strong>3D meshes "in action"</strong> in a
+                <strong>feed-forward</strong> manner.
                 Drawing inspiration from early video models, our key insight is to modify existing 3D diffusion models
-                to include a temporal axis, resulting in a framework we dubbed "temporal 3D diffusion".
+                to include a temporal axis, resulting in a framework we dubbed <strong>"temporal 3D diffusion"</strong>.
                 Specifically, we first adapt the 3D diffusion stage to generate a sequence of synchronized latents
                 representing time-varying and independent 3D shapes.
-                Second, we design a temporal 3D autoencoder that translates a sequence of independent shapes into the
+                Second, we design a <strong>temporal 3D autoencoder</strong> that translates a sequence of independent shapes into the
                 corresponding deformations of a pre-defined reference shape, allowing us to build an animation.
                 Combining these two components, ActionMesh generates animated 3D meshes from different inputs like a
                 monocular video, a text description, or even a 3D mesh with a text prompt describing its animation.
-                Besides, compared to previous approaches, our method is fast and produces results that are rig-free and
-                topology consistent, hence enabling rapid iteration and seamless applications like texturing and
+                Besides, compared to previous approaches, our method is fast and produces results that are <strong>rig-free</strong> and
+                <strong>topology consistent</strong>, hence enabling rapid iteration and seamless applications like texturing and
                 retargeting.
                 We evaluate our model on standard video-to-4D benchmarks (Consistent4D, Objaverse) and report
                 state-of-the-art performances on both geometric accuracy and temporal consistency, demonstrating that
@@ -1084,7 +1088,7 @@
 
         <!-- Subtitle: DAVIS real-scenes -->
         <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 2rem; margin-bottom: 1.5rem;">
-          <h3 class="title is-4" style="margin: 0;">A. Results on DAVIS - </h3>
+          <h3 class="title is-4" style="margin: 0;">A. Results on DAVIS</h3>
           <div class="io-set-buttons" style="margin: 0;">
             <button class="io-set-button io-active" data-set="1">Set 1</button>
             <button class="io-set-button" data-set="2">Set 2</button>
