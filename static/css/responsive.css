@@ -1,0 +1,174 @@
+/* Responsive scaling for narrow screens (<900px) */
+/* This file handles typography scaling and grid column preservation */
+
+@media (max-width: 900px) {
+  /* Remove container padding on narrow screens */
+  .section {
+    padding: 0.5rem 0 !important;
+  }
+
+  .container {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* Scale down page title */
+  .title.is-1.publication-title {
+    font-size: 4vw !important;
+  }
+
+  /* Scale down subtitle and author info */
+  .is-size-5.publication-authors {
+    font-size: 2vw !important;
+  }
+
+  .author-block {
+    font-size: 2vw !important;
+  }
+
+  /* Scale down abstract title */
+  .title.is-3 {
+    font-size: 3vw !important;
+  }
+
+  /* Scale down section subtitles (A. Results on DAVIS, B. Comparison to SOTA, etc.) */
+  .title.is-4 {
+    font-size: 2.5vw !important;
+  }
+
+  /* Scale down abstract text */
+  .content.has-text-justified p {
+    font-size: 2vw !important;
+  }
+
+  /* Scale down publication link buttons */
+  .publication-links .button {
+    font-size: 1.5vw !important;
+    padding: 0.5vw 1vw !important;
+  }
+
+  .publication-links .button .icon {
+    font-size: 1.5vw !important;
+  }
+
+  .publication-links {
+    gap: 0.5vw !important;
+  }
+
+  /* Scale down application titles and buttons */
+  .app-section-title {
+    font-size: 1.8vw !important;
+    padding: 0.8vw 1.5vw !important;
+    gap: 0.8vw !important;
+  }
+
+  .app-emoji-badge {
+    font-size: 1.4vw !important;
+    padding: 0.5vw 0.8vw !important;
+  }
+
+  .set-buttons button, .io-set-buttons button, .img-to-4d-set-buttons button,
+  .txt-to-4d-set-buttons button, .mesh-to-4d-set-buttons button {
+    font-size: 1vw !important;
+    padding: 0.3vw 0.7vw !important;
+    min-width: 0 !important;
+  }
+
+  /* Scale down text prompts in text-to-4D section */
+  .txt-to-4d-prompt-text {
+    font-size: 1.8vw !important;
+  }
+
+  .txt-to-4d-prompt-box {
+    min-height: 50px !important;
+    padding: 0.5vw !important;
+  }
+
+  /* Scale down prompts in image-to-4D and mesh-to-4D sections */
+  .img-to-4d-prompt, .mesh-to-4d-prompt {
+    font-size: 1.2vw !important;
+  }
+
+  .img-to-4d-plus, .mesh-to-4d-plus {
+    font-size: 2vw !important;
+  }
+
+  /* Scale down the diagram section */
+  .diagram-input-legend {
+    font-size: 1.5vw !important;
+  }
+
+  .diagram-prompt-label {
+    font-size: 1.2vw !important;
+    padding: 0.5vw 1vw !important;
+  }
+
+  .diagram-text-prompt {
+    font-size: 1.2vw !important;
+    padding: 0.8vw 1.2vw !important;
+  }
+
+  .diagram-arrow {
+    font-size: 2vw !important;
+  }
+
+  .actionmesh-box {
+    font-size: 2vw !important;
+    padding: 0.5vw 2vw !important;
+  }
+
+  /* Scale down 4D viewer labels */
+  .viewer-4d-label {
+    font-size: 1.5vw !important;
+    padding: 1vw 1.2vw !important;
+  }
+
+  .viewer-4d-controls button {
+    font-size: 1.2vw !important;
+    padding: 0.5vw 1.2vw !important;
+  }
+
+  /* Scale down platforms summary text */
+  .platforms-summary {
+    font-size: 2vw !important;
+  }
+
+  /* Scale down video grid header cells (Input, LIM, DM4D, V2M4, SG4D, Ours, etc.) */
+  .header-cell, .io-header-cell, .longseq-header-cell,
+  .img-to-4d-header-cell, .txt-to-4d-header-cell, .mesh-to-4d-header-cell,
+  .retargetting-header-cell, .limitations-header-cell {
+    font-size: 1.2vw !important;
+  }
+
+  /* Scale down limitation description text */
+  .limitations-description {
+    font-size: 1.2vw !important;
+  }
+
+  /* Hide header rows on narrow screens to prevent overflow */
+  .header-row, .io-header-row, .longseq-header-row,
+  .img-to-4d-header-row, .txt-to-4d-header-row, .mesh-to-4d-header-row,
+  .retargetting-header-row, .limitations-header-row {
+    display: none !important;
+  }
+
+  /* Force grid columns to never change */
+  .video-row { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; }
+  .io-video-row { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  .longseq-video-row { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  .img-to-4d-video-row { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  .txt-to-4d-video-row { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  .mesh-to-4d-video-row { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  .retargetting-video-row { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .limitations-video-row { grid-template-columns: repeat(6, 1fr) !important; }
+  .limitations-description-row { grid-template-columns: repeat(3, 1fr) !important; }
+
+  /* Prevent any flex wrapping */
+  .set-buttons, .io-set-buttons, .img-to-4d-set-buttons, .txt-to-4d-set-buttons, .mesh-to-4d-set-buttons,
+  div[style*="display: flex"] { flex-wrap: nowrap !important; }
+
+  /* Scale down the content containers - JS handles actual scaling */
+  .content.is-centered.has-text-centered.has-text-justified.scalable-content {
+    transform-origin: top left;
+  }
+}

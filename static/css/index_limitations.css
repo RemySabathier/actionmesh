@@ -69,34 +69,7 @@
   border-radius: 6px;
 }
 
-/* Responsive adjustments */
+/* Responsive: keep grid structure but allow horizontal scroll on narrow screens */
 @media (max-width: 1200px) {
-  .limitations-header-row,
-  .limitations-video-row {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .limitations-video-row {
-    grid-auto-flow: dense;
-  }
-
-  .limitations-description-row {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .limitations-header-row,
-  .limitations-video-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .limitations-description-row {
-    grid-template-columns: 1fr;
-  }
-
-  .limitations-header-cell,
-  .limitations-description {
-    font-size: 0.8rem;
-  }
+  /* Disabled - scaling handled in index.html inline styles */
 }

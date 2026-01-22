@@ -730,6 +730,9 @@
         right: 5px;
       }
     }
+
+    /* Force all video grids to maintain column structure and scale on narrow screens */
+    /* Responsive styles moved to static/css/responsive.css */
   </style>
 
   <!-- Defer non-critical CSS -->
@@ -752,6 +755,8 @@
     onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="./static/css/index_limitations.css" as="style"
     onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="./static/css/responsive.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
 
   <!-- Fallback for browsers without JavaScript -->
   <noscript>
@@ -767,6 +772,7 @@
     <link rel="stylesheet" href="./static/css/index_longseq.css">
     <link rel="stylesheet" href="./static/css/index_retargetting.css">
     <link rel="stylesheet" href="./static/css/index_limitations.css">
+    <link rel="stylesheet" href="./static/css/responsive.css">
   </noscript>
 
   <!-- Async font loading with display swap -->
@@ -1127,7 +1133,7 @@
             <div class="io-header-row">
               <div class="io-header-cell">Input</div>
               <div class="io-header-cell">Ours</div>
-              <div class="io-header-cell io-pair-gap-left">Input</div>
+              <div class="io-header-cell">Input</div>
               <div class="io-header-cell">Ours</div>
             </div>
 
@@ -1565,7 +1571,7 @@
   <section class="section" id="app-3d-text-to-4d">
     <div class="container is-max-desktop">
       <div class="container is-centered has-text-centered">
-        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
             <h2 class="app-section-title app-2" style="margin: 0;"><span class="app-emoji-badge">📦+✏️</span> Application 2: {3D+text}-to-4D</h2>
             <div class="mesh-to-4d-set-buttons" style="margin: 0;">
               <button class="mesh-to-4d-set-button mesh-to-4d-active" data-set="1">Set 1</button>
@@ -2157,6 +2163,9 @@
 
   <!-- 4D Viewer Play/Pause Script -->
   <script type="module" src="./static/js/model-viewer-controls.js"></script>
+
+  <!-- Responsive scaling script -->
+  <script defer src="./static/js/responsive.js"></script>
 
   <!-- Video Carousel Script -->
   <script>

@@ -8,7 +8,7 @@
   margin-bottom: 1rem;
   display: flex;
   gap: 0.5rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
 }
@@ -109,27 +109,7 @@
   background: #000;
 }
 
-/* Responsive: fall back to 2 columns on narrow screens */
+/* Responsive: keep grid structure but allow horizontal scroll on narrow screens */
 @media (max-width: 900px) {
-  #txt-to-4d-grid .txt-to-4d-header-row,
-  #txt-to-4d-grid .txt-to-4d-video-row {
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: auto;
-  }
-
-  #txt-to-4d-grid .txt-to-4d-prompt-box {
-    min-height: 100px;
-  }
-
-  #txt-to-4d-grid .txt-to-4d-prompt-text {
-    font-size: 1.2rem;
-  }
-
-  #txt-to-4d-grid .txt-to-4d-header-row::after {
-    content: "Scroll horizontally on small screens.";
-    grid-column: 1 / -1;
-    font-size: 0.75rem;
-    color: #888;
-    margin-top: 4px;
-  }
+  /* Disabled - scaling handled in index.html inline styles */
 }

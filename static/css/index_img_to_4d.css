@@ -8,7 +8,7 @@
     margin-bottom: 1rem;
     display: flex;
     gap: 0.5rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
 }
@@ -121,20 +121,7 @@
   text-align: center;
 }
 
-/* Responsive: fall back to 2 columns on narrow screens */
+/* Responsive: keep grid structure but allow horizontal scroll on narrow screens */
 @media (max-width: 900px) {
-
-    #img-to-4d-grid .img-to-4d-header-row,
-    #img-to-4d-grid .img-to-4d-video-row {
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: auto;
-    }
-
-    #img-to-4d-grid .img-to-4d-header-row::after {
-        content: "Scroll horizontally on small screens.";
-        grid-column: 1 / -1;
-        font-size: 0.75rem;
-        color: #888;
-        margin-top: 4px;
-    }
+  /* Disabled - scaling handled in index.html inline styles */
 }
